@@ -97,8 +97,12 @@ const main = () => {
   const colRightWrapper = document.createElement('div');
   colRightWrapper.className = 'details col-sm-4 mt-3 py-3 d-flex align-items-center';
 
-  const rightCard = document.createElement('div');
-  rightCard.className = 'card shadow';
+  /**
+   * @card that displays details
+   */
+
+  const cardDetail = document.createElement('div');
+  cardDetail.className = 'card shadow';
 
   const detailsWrapper = document.createElement('div');
   detailsWrapper.className = 'row text-center';
@@ -133,17 +137,23 @@ const main = () => {
   const tempMaxTxt = document.createElement('p');
   tempMaxTxt.className = 'fs-5';
   tempMaxTxt.textContent = 'TEMP MAX';
+  const tempHeader = document.createElement('div');
+  tempHeader.className = 'col-12 bg-primary py-3';
+  const titleHeaderCard = document.createElement('h2');
+  titleHeaderCard.className = 'text-light';
+  titleHeaderCard.innerHTML = 'Details';
+  tempHeader.append(titleHeaderCard);
 
   pressure.append(pressureNbr, pressureTxt);
   humidity.append(humidityNbr, humidityTxt);
   tempMin.append(tempMinNbr, tempMinTxt);
   tempMax.append(tempMaxNbr, tempMaxTxt);
 
-  detailsWrapper.append(pressure, humidity, tempMin, tempMax);
+  detailsWrapper.append(tempHeader, pressure, humidity, tempMin, tempMax);
 
-  rightCard.appendChild(detailsWrapper);
+  cardDetail.appendChild(detailsWrapper);
 
-  colRightWrapper.appendChild(rightCard);
+  colRightWrapper.appendChild(cardDetail);
 
   main.append(colLeftWrapper, colRightWrapper);
   return main;
