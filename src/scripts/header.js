@@ -7,7 +7,7 @@ const header = () => {
   const logoWrapper = document.createElement('div');
   const h1 = document.createElement('h1');
   h1.className = 'text-light';
-  h1.textContent = 'Weather app';
+  h1.textContent = 'Weather App';
 
   logoWrapper.appendChild(h1);
 
@@ -16,6 +16,9 @@ const header = () => {
   const errorContainer = document.createElement('div');
   errorContainer.innerHTML = 'This entered place was not found';
   errorContainer.className = 'd-none alert-msg';
+  setAttributes(errorContainer, {
+    id: 'alert',
+  });
 
   const searchInput = document.createElement('input');
   setAttributes(searchInput, {
