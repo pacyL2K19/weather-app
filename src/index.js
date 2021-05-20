@@ -6,6 +6,7 @@ import displayWeather from './scripts/weatherRender';
 import tempConverted from './scripts/tempConver';
 
 const content = document.querySelector('#content');
+const alertBox = document.querySelector('.alert-msg');
 content.className = 'body';
 
 const mainPage = document.createElement('div');
@@ -22,7 +23,14 @@ homePage();
 const defaultCountry = 'Moscow';
 const getWeather = (query) => {
   fetch(`${weatherApi.base}weather?q=${query}&units=metric&APPID=${weatherApi.key}`)
-    .then(weather => weather.json()).then(displayWeather);
+    .then(weather => weather.json()).then(displayWeather)
+    .catch(() => {
+      console.log('here');
+      alertBox.classList.remove('d-none');
+      setTimeout(() => {
+        alertBox.classList.add('d-none');
+      }, 1500);
+    });
 };
 
 getWeather(defaultCountry);

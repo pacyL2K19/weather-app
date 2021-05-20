@@ -55,6 +55,23 @@ body {
   font-size: 1em;
 }
 
+.details {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.4;
+}
+
+.alert-msg {
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 10px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+}
+
 .cloud {
   color: #fff;
   position: absolute;

@@ -13,6 +13,9 @@ const header = () => {
 
   const searchWrapper = document.createElement('div');
   searchWrapper.className = 'd-flex align-items-center';
+  const errorContainer = document.createElement('div');
+  errorContainer.innerHTML = 'This entered place was not found';
+  errorContainer.className = 'd-none alert-msg';
 
   const searchInput = document.createElement('input');
   setAttributes(searchInput, {
@@ -32,7 +35,7 @@ const header = () => {
 
   tempWrapper.append(tempSwitch, tempConnversion);
 
-  searchWrapper.append(searchInput, tempWrapper);
+  searchWrapper.append(searchInput, tempWrapper, errorContainer);
 
   header.append(logoWrapper, searchWrapper);
   return header;
