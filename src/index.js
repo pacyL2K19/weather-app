@@ -1,6 +1,6 @@
 import './styles/styles.css';
 import header from './scripts/header';
-import main from './scripts/main_render';
+import main from './scripts/render';
 import weatherApi from './scripts/weatherApi';
 import displayWeather from './scripts/weatherRender';
 import tempConverted from './scripts/tempConver';
