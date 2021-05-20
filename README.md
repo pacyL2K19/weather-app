@@ -35,7 +35,9 @@
 
 <b>TODO List </b> The main goal of this project is to understand the benefits of modularized code as well as the ability to set up a javascript application made of different modules using webpack and more advanced ES6 features
 
-<img src="./src/assets/screenshot.png" alt="Screenshot" style="margin: auto; display: block;">
+<img src="./src/assets/screen.png" alt="Screenshot" style="margin: auto; display: block;">
+<p>When the typed city is not found</p>
+<img src="./src/assets/error.png" alt="Screenshot error" style="margin: auto; display: block;">
 
 ## Watch the Live Version
 
@@ -68,11 +70,6 @@
     ``` 
     to bundle scripts with **_webpack_** a static module bundler for modern JavaScript applications
     Then open the `dist/index.html` in a web browser
-7. In develoment mode run 
-    ```bash
-    npm run start
-    ```
-    This will allow you to watch changes in entry files
 
 ### Usage
 Lauch the local version of this project opening the `dist/index.html` file in the browser
