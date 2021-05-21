@@ -97,10 +97,6 @@ const main = () => {
   const colRightWrapper = document.createElement('div');
   colRightWrapper.className = 'details col-sm-4 mt-3 py-3 d-flex align-items-center';
 
-  /**
-   * @card that displays details
-   */
-
   const cardDetail = document.createElement('div');
   cardDetail.className = 'card shadow';
 
