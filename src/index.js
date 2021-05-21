@@ -19,7 +19,7 @@ const homePage = () => {
 
 homePage();
 
-const defaultCountry = 'Moscow';
+const defaultCountry = 'Kinshasa';
 const getWeather = (query) => {
   const alertBox = document.getElementById('alert');
 
