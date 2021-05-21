@@ -169,7 +169,7 @@ const displayWeather = (weather) => {
   document.getElementById('tempSwitch').checked = false;
 
   const textTemp = document.querySelector('#text-temp');
-  textTemp.textContent = weather.weather[0].description;
+  textTemp.textContent = weather.weather ? weather.weather[0].description : '';
 
   const city = document.querySelector('#city');
   city.textContent = `${weather.name}, ${weather.sys.country} `;
